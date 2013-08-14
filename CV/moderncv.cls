@@ -319,12 +319,27 @@
           \newlength{\pagenumberwidth}%
           \settowidth{\pagenumberwidth}{\color{color2}\addressfont\itshape\strut\thepage/\pageref{lastpage}}%
 	  \newlength{\fechawidth}%
-          \settowidth{\fechawidth}{\color{color2}\addressfont\itshape\strut\ 'May 2013'}%
+          \settowidth{\fechawidth}{\color{color2}\addressfont\itshape\strut\ 'Septiembre 2012'}%
           \fancypagestyle{plain}{%
-	    \fancyfoot[l]{\parbox{\fechawidth}{\color{color2}\addressfont\itshape\strut\ May 2013}}
+	    \fancyfoot[l]{\parbox{\fechawidth}{\color{color2}\addressfont\itshape\strut\ Septiembre 2012}}
             \fancyfoot[r]{\parbox{\pagenumberwidth}{\color{color2}\addressfont\itshape\strut\thepage/\pageref{lastpage}}}}% the parbox is required to ensure alignment with a possible center footer (e.g., as in the casual style)
           \pagestyle{plain}}{}}%
       \AtEndDocument{\label{lastpage}}\else\fi}}
+
+% thebibliography environment, for use with BibTeX and possibly multibib
+\newcommand{\refname}{Publicaciones}
+\newlength{\bibindent}
+\setlength{\bibindent}{1.5em}
+% bibliography item label
+\newcommand*{\bibliographyitemlabel}{}% use \@biblabel{\arabic{enumiv}} for BibTeX labels
+%\newif\if@multibibfirstbib\@multibibfirstbibfalse
+% bibliography head (section, etc}, depending on whether multibib is used
+\newcommand*{\bibliographyhead}[1]{\section{#1}}
+\AtEndPreamble{\@ifpackageloaded{multibib}{\renewcommand*{\bibliographyhead}[1]{\subsection{#1}}}{}}
+% thebibliography environment definition
+\newenvironment{thebibliography}[1]{}{}
+\newcommand\newblock{\hskip .11em\@plus.33em\@minus.07em}
+\let\@openbib@code\@empty
 
 % itemize, enumerate and description environment
 \setlength{\leftmargini}   {1em}
