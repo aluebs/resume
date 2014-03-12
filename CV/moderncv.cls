@@ -319,9 +319,9 @@
           \newlength{\pagenumberwidth}%
           \settowidth{\pagenumberwidth}{\color{color2}\addressfont\itshape\strut\thepage/\pageref{lastpage}}%
 	  \newlength{\fechawidth}%
-          \settowidth{\fechawidth}{\color{color2}\addressfont\itshape\strut\ 'October 2013'}%
+          \settowidth{\fechawidth}{\color{color2}\addressfont\itshape\strut\ 'March 2014'}%
           \fancypagestyle{plain}{%
-	    \fancyfoot[l]{\parbox{\fechawidth}{\color{color2}\addressfont\itshape\strut\ October 2013}}
+	    \fancyfoot[l]{\parbox{\fechawidth}{\color{color2}\addressfont\itshape\strut\ March 2014}}
             \fancyfoot[r]{\parbox{\pagenumberwidth}{\color{color2}\addressfont\itshape\strut\thepage/\pageref{lastpage}}}}% the parbox is required to ensure alignment with a possible center footer (e.g., as in the casual style)
           \pagestyle{plain}}{}}%
       \AtEndDocument{\label{lastpage}}\else\fi}}
