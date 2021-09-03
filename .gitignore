@@ -1,6 +1,7 @@
+*~
 *.aux
+*.backup
 *.log
 *.out
 *.pdf
-*~
-*.backup
+*.swp

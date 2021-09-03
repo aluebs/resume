@@ -239,7 +239,7 @@
 \newcommand*{\birth}[1]{\def\@birth{#1}}
 \newcommand*{\national}[1]{\def\@national{#1}}
 \newcommand*{\civil}[1]{\def\@civil{#1}}
-\newcommandx*{\photo}[3][1=108pt,2=1pt,usedefault]{\def\@photowidth{#1}\def\@photoframewidth{#2}\def\@photo{#3}}% the 1st (optional) argument is the width of the photo, the 2nd (optional) argument is the thickness of the frame around it.
+%\newcommandx*{\photo}[3][1=108pt,2=1pt,usedefault]{\def\@photowidth{#1}\def\@photoframewidth{#2}\def\@photo{#3}}% the 1st (optional) argument is the width of the photo, the 2nd (optional) argument is the thickness of the frame around it.
 \newcommand*{\quote}[1]{\def\@quote{#1}}
 
 % makes the cv title
@@ -319,9 +319,9 @@
           \newlength{\pagenumberwidth}%
           \settowidth{\pagenumberwidth}{\color{color2}\addressfont\itshape\strut\thepage/\pageref{lastpage}}%
 	  \newlength{\fechawidth}%
-          \settowidth{\fechawidth}{\color{color2}\addressfont\itshape\strut\ 'March 2014'}%
+          \settowidth{\fechawidth}{\color{color2}\addressfont\itshape\strut\ 'September 2021'}%
           \fancypagestyle{plain}{%
-	    \fancyfoot[l]{\parbox{\fechawidth}{\color{color2}\addressfont\itshape\strut\ March 2014}}
+	    \fancyfoot[l]{\parbox{\fechawidth}{\color{color2}\addressfont\itshape\strut\ September 2021}}
             \fancyfoot[r]{\parbox{\pagenumberwidth}{\color{color2}\addressfont\itshape\strut\thepage/\pageref{lastpage}}}}% the parbox is required to ensure alignment with a possible center footer (e.g., as in the casual style)
           \pagestyle{plain}}{}}%
       \AtEndDocument{\label{lastpage}}\else\fi}}
